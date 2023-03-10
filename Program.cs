@@ -17,12 +17,12 @@ switch (fromUser)
         Console.WriteLine($"{fromUser} - Такой команды нет");
         break;
 }
+
 int lenNewArray = 0;
 for (int i = 0; i <= array.Length - 1; i++)
 {
     if (array[i].Length <= 3) lenNewArray++;
 }
-
 string[] newArray = new string[lenNewArray];
 int idx = 0;
 
@@ -37,4 +37,14 @@ for (int i = 0; i <= array.Length - 1; i++)
 PrintArray(array);
 Console.Write("→ ");
 PrintArray(newArray);
+
+void Commands()
+{
+    Console.WriteLine();
+    Console.WriteLine("СПИСОК КОМАНД:");
+    Console.WriteLine("1 – использовать массив: [“Hello”, “2”, “world”, “:-)”]");
+    Console.WriteLine("2 – использовать массив: [“1234”, “1567”, “-2”, “computer science”]");
+    Console.WriteLine("3 – использовать массив: [“Russia”, “Denmark”, “Kazan”]");
+    Console.WriteLine();
+}
 
